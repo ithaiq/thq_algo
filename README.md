@@ -19,6 +19,12 @@
 6. [给定一个二叉树，返回其节点值的锯齿形层次遍历。](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
 7. [给定一个二叉树，判断其是否是一个有效的二叉搜索树。](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
 8. [给定二叉搜索树（BST）的根节点和要插入树中的值，将值插入二叉搜索树。](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
+9. [二叉树的序列化与反序列化](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
+10. [二叉树的序列化与反序列化](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
+11. [填充每个节点的下一个右侧节点指针 I](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
+12. [填充每个节点的下一个右侧节点指针 II](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
+13. [从前序与中序遍历序列构造二叉树](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
+14. [从中序与后序遍历序列构造二叉树](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
 
 ## 基础算法
 

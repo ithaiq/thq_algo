@@ -2,6 +2,8 @@ package main
 
 import (
 	"math"
+	"strconv"
+	"strings"
 )
 
 type TreeNode struct {
@@ -419,4 +421,151 @@ func insertIntoBST(root *TreeNode, val int) *TreeNode {
 		root.Right = insertIntoBST(root.Right, val)
 	}
 	return root
+}
+
+//https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
+//从中序与后序遍历序列构造二叉树
+func buildTree(inorder []int, postorder []int) *TreeNode {
+	if len(inorder) == 0 || len(postorder) == 0 {
+		return nil
+	}
+	node := postorder[len(postorder)-1]
+	index := func(inorder []int, node int) int {
+		for i, v := range inorder {
+			if v == node {
+				return i
+			}
+		}
+		return -1
+	}(inorder, node)
+	root := &TreeNode{
+		Val:   node,
+		Left:  buildTree(inorder[:index], postorder[:index]),
+		Right: buildTree(inorder[index+1:], postorder[index:len(postorder)-1]),
+	}
+	return root
+}
+
+//https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+//从前序与中序遍历序列构造二叉树
+func buildTree2(preorder []int, inorder []int) *TreeNode {
+	if len(inorder) == 0 || len(preorder) == 0 {
+		return nil
+	}
+	node := preorder[0]
+	index := func(inorder []int, node int) int {
+		for i, v := range inorder {
+			if v == node {
+				return i
+			}
+		}
+		return -1
+	}(inorder, node)
+	root := &TreeNode{
+		Val:   node,
+		Left:  buildTree(preorder[1:index+1], inorder[:index]),
+		Right: buildTree(preorder[index+1:], inorder[index+1:]),
+	}
+	return root
+}
+
+//https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/
+//填充每个节点的下一个右侧节点指针
+type NodeN struct {
+	Val   int
+	Left  *NodeN
+	Right *NodeN
+	Next  *NodeN
+}
+
+func connect(root *NodeN) *NodeN {
+	setNext(root, nil)
+	return root
+}
+func setNext(root *NodeN, next *NodeN) {
+	if root == nil {
+		return
+	}
+	root.Next = next
+	setNext(root.Left, root.Right)
+	var rightNode *NodeN
+	if root.Next != nil {
+		rightNode = root.Next.Left
+	}
+	setNext(root.Right, rightNode)
+}
+
+//https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii/
+//填充每个节点的下一个右侧节点指针 II
+func connect2(root *NodeN) *NodeN {
+	setNext(root, nil)
+	return root
+}
+func setNext2(root *NodeN, next *NodeN) {
+	if root == nil {
+		return
+	}
+	getNode := func(node *NodeN) (subNode *NodeN) {
+		for node != nil {
+			if node.Left != nil {
+				subNode = node.Left
+				break
+			}
+			if node.Right != nil {
+				subNode = node.Right
+				break
+			}
+			node = node.Next
+		}
+		return
+	}
+	root.Next = next
+	setNext(root.Right, getNode(root.Next))
+	setNext(root.Left, func() *NodeN {
+		if root.Right != nil {
+			return root.Right
+		} else {
+			return getNode(root.Next)
+		}
+	}())
+}
+
+//https://leetcode-cn.com/leetbook/read/data-structure-binary-tree/xomr73/
+//二叉树的序列化与反序列化
+//输入：root = [1,2,3,null,null,4,5]
+//输出：[1,2,3,null,null,4,5]
+type Codec struct {
+	queue []string
+}
+
+func Constructor() Codec {
+	return Codec{}
+}
+
+// Serializes a tree to a single string.
+func (this *Codec) serialize(root *TreeNode) string { //DFS前序遍历
+	if root == nil {
+		return "#"
+	}
+	return strconv.Itoa(root.Val) + "," + this.serialize(root.Left) + "," + this.serialize(root.Right)
+}
+
+// Deserializes your encoded data to tree.
+func (this *Codec) deserialize(data string) *TreeNode {
+	this.queue = strings.Split(data, ",")
+	return this.helper()
+}
+
+func (this *Codec) helper() *TreeNode {
+	valStr := this.queue[0]
+	this.queue = this.queue[1:]
+	if valStr == "#" {
+		return nil
+	}
+	val, _ := strconv.Atoi(valStr)
+	return &TreeNode{
+		Val:   val,
+		Left:  this.helper(),
+		Right: this.helper(),
+	}
 }
