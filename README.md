@@ -26,6 +26,22 @@
 13. [从前序与中序遍历序列构造二叉树](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
 14. [从中序与后序遍历序列构造二叉树](https://github.com/ithaiq/thq_algo/blob/master/data_structure/二叉树.go)
 
+### 链表
+
+例题：
+
+1. [给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L11)
+2. [给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现的数字。](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L36)
+3. [反转一个单链表](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#59)
+4. [反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#72)
+5. [将两个升序链表合并为一个新的升序链表并返回](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L102)
+6. [给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L130)
+7. [在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L155)
+8. [给定一个单链表 L：L→L→…→L__n→L 将其重新排列后变为： L→L__n→L→L__n→L→L__n→…](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L187)
+9. [给定一个链表，判断链表中是否有环。](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L200)
+10. [给定一个链表，返回链表开始入环的第一个节点](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L218)
+11. [请判断一个链表是否为回文链表](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L242)
+
 ## 基础算法
 
 
