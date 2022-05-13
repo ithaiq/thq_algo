@@ -1,5 +1,16 @@
 # thq_algo
 算法刷题golang实现
+## 常见面试题综合
+
+1. [两数之和](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L14)
+2. [给你两个 非空 的链表，表示两个非负的整数。请你将两个数相加，并以相同形式返回一个表示和的链表。](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L27)
+3. [无重复字符最长子串](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L57)
+4. [最长回文子串](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L111)
+5. [三数之和](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L141)
+6. [删除链表的倒数第 N 个结点](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L174)
+7. [有效的括号](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L195)
+8. [合并两个有序链表](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L224)
+
 
 ## 数据结构
 ### 二叉树
@@ -46,3 +57,15 @@
 
 
 ## 算法思维
+
+## 技巧细节注意
+1. 切片[:]返回原切片,[:0]返回空切片
+2. string遍历用for i:=0;i<len(str);i++ 遍历得到的是byte
+3. 排序
+    ```
+    sort.Ints([]int{})
+    // 字符串排序
+    sort.Strings([]string{})
+    // 自定义排序
+    sort.Slice(s,func(i,j int)bool{return s[i]<s[j]})
+   ```
