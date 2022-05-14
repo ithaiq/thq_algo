@@ -243,3 +243,94 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	}
 	return dummy.Next
 }
+
+//https://leetcode.cn/problems/reverse-linked-list/
+// 反转链表
+// p 1 2 3
+//   1 nil
+//   p head
+func reverseList(head *ListNode) *ListNode { ///
+	var pre *ListNode
+	for head != nil {
+		next := head.Next
+		head.Next = pre
+
+		pre = head
+		head = next
+	}
+	return pre
+}
+
+//https://leetcode.cn/problems/swap-nodes-in-pairs/
+//两两交换链表中的节点
+//输入：[1,2,3,4]
+//输出：[2,1,4,3]
+//c 1 2 3 4
+//c 2 1 3 4
+//	  c
+func swapPairs(head *ListNode) *ListNode { ///
+	dummy := &ListNode{}
+	dummy.Next = head
+	newHead := dummy
+	for dummy != nil && dummy.Next != nil && dummy.Next.Next != nil {
+		n1 := dummy.Next
+		n2 := dummy.Next.Next
+		next := n2.Next
+
+		n2.Next = n1
+		n1.Next = next
+		dummy.Next = n2
+		dummy = n1
+	}
+	return newHead.Next
+}
+
+//https://leetcode.cn/problems/group-anagrams/
+//字母异位词分组
+//输入: strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+//输出: [["bat"],["nat","tan"],["ate","eat","tea"]]
+func groupAnagrams(strs []string) [][]string {
+	strMap := make(map[[26]int][]string)
+
+	for _, str := range strs {
+		arr := [26]int{}
+		for i := 0; i < len(str); i++ {
+			arr[str[i]-'a'] += 1
+		}
+		val, ok := strMap[arr]
+		if ok {
+			val = append(val, str)
+		} else {
+			val = []string{str}
+		}
+		strMap[arr] = val ///
+	}
+	ret := make([][]string, 0, len(strMap))
+	for _, v := range strMap {
+		ret = append(ret, v)
+	}
+	return ret
+}
+
+//https://leetcode.cn/problems/maximum-subarray/
+//最大子数组和
+//输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
+//输出：6
+//解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。
+func maxSubArray(nums []int) int {
+	maxFun := func(a, b int) int {
+		if a < b {
+			return b
+		} else {
+			return a
+		}
+	}
+	dp := make([]int, len(nums))
+	dp[0] = nums[0]
+	max := dp[0]
+	for i := 1; i < len(nums); i++ {
+		dp[i] = maxFun(dp[i-1]+nums[i], nums[i])
+		max = maxFun(max, dp[i])
+	}
+	return max
+}

@@ -1,15 +1,19 @@
 # thq_algo
 算法刷题golang实现
-## 常见面试题综合
+## 高频面试题
 
 1. [两数之和](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L14)
-2. [给你两个 非空 的链表，表示两个非负的整数。请你将两个数相加，并以相同形式返回一个表示和的链表。](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L27)
+2. [链表相加](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L27)
 3. [无重复字符最长子串](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L57)
 4. [最长回文子串](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L111)
 5. [三数之和](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L141)
 6. [删除链表的倒数第 N 个结点](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L174)
 7. [有效的括号](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L195)
 8. [合并两个有序链表](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L224)
+9. [反转链表](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L252)
+10. [两两交换链表中的节点](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L271)
+11. [字母异位词分组](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L292)
+12. [最大子数组和](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L320)
 
 
 ## 数据结构
@@ -69,3 +73,4 @@
     // 自定义排序
     sort.Slice(s,func(i,j int)bool{return s[i]<s[j]})
    ```
+4. 切片append扩容指针地址会变
