@@ -1,6 +1,6 @@
 # thq_algo
-算法刷题golang实现
-## 高频面试题
+golang算法
+## Leetcode真题
 
 1. [两数之和](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L14)
 2. [链表相加](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L27)
@@ -14,6 +14,37 @@
 10. [两两交换链表中的节点](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L271)
 11. [字母异位词分组](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L292)
 12. [最大子数组和](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L320)
+13. [螺旋矩阵](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L320)
+14. [跳跃游戏](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L390)
+15. [合并区间](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L420)
+16. [不同路径](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L452)
+17. [加一](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L474)
+18. [爬楼梯](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L494)
+19. [删除排序链表中的重复元素](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L519)
+20. [反转链表 II](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L537)
+21. [买卖股票的最佳时机](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L566)
+22. [买卖股票的最佳时机 II](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L591)
+23. [买卖股票的最佳时机 III](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L625)
+24. [加油站](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L643)
+25. [环形链表](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L665)
+26. [环形链表 II](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L682)
+27. [乘积最大子数组](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L711)
+28. [寻找旋转排序数组中的最小值](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L753)
+29. [相交链表](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L782)
+30. [按奇偶排序数组](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L829)
+31. [按奇偶排序数组 II](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L860)
+32. [奇偶链表](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L880)
+33. [水果成篮](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L904)
+34. [链表的中间结点](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L934)
+35. [比较含退格的字符串](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L949)
+36. [旋转字符串](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L994)
+37. [岛屿数量](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L1018)
+38. [岛屿的最大面积](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L1052)
+39. [甲板上的战舰](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L1083)
+40. [验证回文字符串 Ⅱ](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L1112)
+41. [链表两数相加 II](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L1138)
+42. [移动零](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L1179)
+43. [除自身以外数组的乘积](https://github.com/ithaiq/thq_algo/blob/master/practice/first.go#L1190)
 
 
 ## 数据结构
@@ -57,11 +88,22 @@
 10. [给定一个链表，返回链表开始入环的第一个节点](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L218)
 11. [请判断一个链表是否为回文链表](https://github.com/ithaiq/thq_algo/blob/master/data_structure/链表.go#L242)
 
-## 基础算法
-
-
 ## 算法思维
+### 回溯法
+1. [无重复数字数组所有子集](https://github.com/ithaiq/thq_algo/blob/master/algo/backtrack.go#L12)
+2. [有重复数字数组所有子集](https://github.com/ithaiq/thq_algo/blob/master/algo/backtrack.go#L37)
+3. [无重复数字数组全排列](https://github.com/ithaiq/thq_algo/blob/master/algo/backtrack.go#L64)
+4. [有重复数字数组全排列](https://github.com/ithaiq/thq_algo/blob/master/algo/backtrack.go#L99)
+### 递归
+1. [反转字符串](https://github.com/ithaiq/thq_algo/blob/master/algo/recursion.go#L9)
+2. [两两交换链表中的节点](https://github.com/ithaiq/thq_algo/blob/master/algo/recursion.go#L28)
+3. [递归反转链表](https://github.com/ithaiq/thq_algo/blob/master/algo/recursion.go#L50)
 
+### 二叉搜索树
+1. [验证二叉搜索树](https://github.com/ithaiq/thq_algo/blob/master/algo/bst.go#L39)
+2. [二叉树插入](https://github.com/ithaiq/thq_algo/blob/master/algo/bst.go#L62)
+3. [二叉树删除](https://github.com/ithaiq/thq_algo/blob/master/algo/bst.go#L76)
+4. [判断是否是平衡二叉树](https://github.com/ithaiq/thq_algo/blob/master/algo/bst.go#L107)
 ## 技巧细节注意
 1. 切片[:]返回原切片,[:0]返回空切片
 2. string遍历用for i:=0;i<len(str);i++ 遍历得到的是byte
